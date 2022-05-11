@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from './store/configureStore';
+import "react-toastify/dist/ReactToastify.min.css"
 
+const store = configureStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter> <App /> </BrowserRouter>
+//configureStore uygulamaya ekleyebilmek için Provider ile sarmalandı.Yani uygulama redux alt yapısıyla sarmalandı.Bununla beraber APP tamamen storenin tüm 
+//nimetlerinden yararlanabilir.
 
-  </React.StrictMode>
+root.render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter> <App /> </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
