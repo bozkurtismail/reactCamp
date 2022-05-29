@@ -24,3 +24,5 @@ export default function CartSummary() {
     </div>
   );
 }
+
+//rfc ile react function component oluşturulur.

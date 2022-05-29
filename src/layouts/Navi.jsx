@@ -35,3 +35,5 @@ export default function Navi() {
     </div>
   );
 }
+
+//  <Menu inverted fixed="top"> fixed yukarıdan aşağı inerken menünün yukarıda kalmasını sağlıyor
