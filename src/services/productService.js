@@ -11,7 +11,7 @@ export default class ProductService {
 }
 
 ///api istekleri ve uygulama mantığı ile ilgili kodlar buraya konacak.Standar javascript kodu
-///olduğu için productServicenin p harfi lüçük yazıldı.
+///olduğu için productServicenin p harfi küçük yazıldı.
 /// direk ismi ile kullanılacağı için default şeklinde tanımlandı.
 /// axios.get("http://localhost:8080/api/products/getAll"); ürünü getiren servicenin adı yazıldı.
 ///apideki yani bir restfull servise request atmaya yarar.

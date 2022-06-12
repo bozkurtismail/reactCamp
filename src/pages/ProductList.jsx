@@ -9,12 +9,13 @@ import { toast } from "react-toastify";
 export default function ProductList() {
   const dispatch = useDispatch(); // fonksiyon çağırmak için genellikle reflektion gibi mimarilerde çağırmak için kullanılır.
 
-  const [products, setProducts] = useState([]); 
+  const [products, setProducts] = useState([]); //2-destructure işlemi yapılıyor.useState([]) bir fonksiyon olup boş bir array almış.uSESTATE bir nesne döndürüyor ve oda eşitliğin karşı tarafına
+  //destructure edilecek.Döndürdüpü yapıda bir data(product) dönüyor,birde fonksiyon(setProducts) dönüyor.
   //products diye bir data olup sayfada kullanılacak ve defaul değeri boş bir array dir.Productsi değiştirmek içinde setProducts kullanılacak.
   //Elimizdeki datanın ilk başlangıç değeri boş arraydir.
-  //lifecycle hook reactin yaşam döngüsüne müdehale etmemizi sağlıyor yukarıda state kullanılan yapı.
+  //lifecycle hook reactin yaşam döngüsüne müdehale etmemizi sağlıyor yukarıda state kullanılan yapı.Products sa müdehale edildiği anda kullanıldığı yerde render edilir.
 
-  useEffect(() => { //component yüklendiğinde yapılması istenen kod useffect() kodu içerisine yazılır.
+  useEffect(() => { //3-component yüklendiğinde yapılması istenen kod useffect() kodu içerisine yazılır.
     let productService = new ProductService();//endpoint classı newlendi
     productService
       .getProducts()
@@ -44,8 +45,8 @@ export default function ProductList() {
         </Table.Header>
 
         <Table.Body>  
-          {products.map((product) => ( //javascript kodu yazılacaksa süslü parantez içinde yazılır.
-            <Table.Row key={product.id}>
+          {products.map((product) => ( //javascript kodu yazılacaksa süslü parantez içinde yazılır.react mapping yapılan noktalarda key değeri ister.tüm veriler için uniq olmasını ister.
+            <Table.Row key={product.id}> 
               <Table.Cell>
                 <Link to={`/products/${product.productName}`}>
                   {" "}
@@ -87,5 +88,5 @@ export default function ProductList() {
     </div>
   );
 }
-// bu sayfa bir data tutacak ,yani bu sayfanın bir datası var örneğin ürünler bu bu sayfanın state datası
-//anlamına geliyor.Bunun için modern reacta kullanılan hook tekniği kullanılacak
+//1- bu sayfa bir data tutacak ,yani bu sayfanın bir datası var örneğin ürünler bu bu sayfanın state datası
+//anlamına geliyor.Bunun için modern reacta kullanılan hook tekniği kullanılacak.
