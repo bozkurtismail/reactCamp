@@ -22,7 +22,7 @@ export default function Navi() {
   }
   return (
     <div>
-      <Menu inverted fixed="top">
+      <Menu inverted fixed="top"> 
         <Container>
           <Menu.Item name="home" />
           <Menu.Item name="messages" />
@@ -36,4 +36,5 @@ export default function Navi() {
   );
 }
 
-//  <Menu inverted fixed="top"> fixed yukarıdan aşağı inerken menünün yukarıda kalmasını sağlıyor
+//  <Menu inverted fixed="top"> fixed yukarıdan aşağı inerken menünün yukarıda kalmasını sağlıyor.İnverted ise bar ı siyah renk yapıyor.
+// <Container> menu içerisindeki diğer elemanları sağa sola yaslanmasını engellemek ekran ortasına almak için kullandık.
