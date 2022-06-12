@@ -90,3 +90,10 @@ export default function ProductList() {
 }
 //1- bu sayfa bir data tutacak ,yani bu sayfanın bir datası var örneğin ürünler bu bu sayfanın state datası
 //anlamına geliyor.Bunun için modern reacta kullanılan hook tekniği kullanılacak.
+
+
+
+//NOT: Bir return () parantezi içerisinde iki tane div kullanılacaksa ya bir tane div yazılıp kapsayıcı olarak içerisine yerleştirilecek
+//yada reactin vermiş olduğu fragment aracı kullanılacak  <> ...... </> ifadesi içerisine iki tane div kullanılabilir.yada 
+//<React.fragment>....</React.fragment> fragment tanımı kullanılabilir.
+//<>....</>       <React.fragment></React.fragment> ikisi aynı kullanım görevini görür.

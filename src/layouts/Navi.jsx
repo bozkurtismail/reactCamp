@@ -27,7 +27,7 @@ export default function Navi() {
           <Menu.Item name="home" />
           <Menu.Item name="messages" />
           <Menu.Menu position="right">
-            {typeof cartItems !=='undefined' &&cartItems.length >0 && <CartSummary />}
+            {typeof cartItems !=='undefined' && cartItems.length >0 && <CartSummary />}
             {isAuthenticated ? <SignedIn signOut={handleSignOut} bisey="1" /> : <SignedOut signIn={handleSignIn} bisey2="2"/>}
           </Menu.Menu>
         </Container>
@@ -38,3 +38,9 @@ export default function Navi() {
 
 //  <Menu inverted fixed="top"> fixed yukarıdan aşağı inerken menünün yukarıda kalmasını sağlıyor.İnverted ise bar ı siyah renk yapıyor.
 // <Container> menu içerisindeki diğer elemanları sağa sola yaslanmasını engellemek ekran ortasına almak için kullandık.
+
+// {isAuthenticated ? <SignedIn signOut={handleSignOut} bisey="1" /> : <SignedOut signIn={handleSignIn} bisey2="2"/>} sanki SignedIn içinde signout fonksiyonu varda oda {handleSignOut} u tetikliyor.
+//{handleSingOut alt componentte data olarak geçiliyor.Bunlara property(props) denir. SignedId.js içerisinde onclick ile props.signout aracılığıyla handleSingout fonksiyonu çağrılıyor.işin diğer bir
+//anlamı bir componentin alt componenti üst componentteki function metodu çalıştırabilmesi.}
+
+//let navigate = useNavigate(); kullanım eskiden useHistorydi şimdiki hali değişti amacı bir sayfadayken başka sayfaya yönlendirmek.

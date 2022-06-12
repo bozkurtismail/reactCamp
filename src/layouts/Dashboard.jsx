@@ -31,12 +31,14 @@ export default function Dashboard() {
     </div>
   );
 }
+//<Route></Route> çalışabilmesi için ana bileşenin browser.router ile sarmallanması gerekir.
 /*<Routes>
 <Route exact path="/" component={<ProductList/>} />
 <Route path="/products" element={<ProductList/>} />             
 </Routes>
 adres kısmında main adres yanında /products path adresi gelirse products listesi gelecektir.
 onun dışındaki gelen adreslerde liste gelmeyecektir.*/
+// <Route path="/products/:name" element={<ProductDetail />} /> :name parametreli bir şekilde çağırmadır.
 
 //bootstrap bir satırı 12 eşit parçaya böler.Semantic ui ise 16 eşit parçaya böler.Semantic ui de grid sistemi kullanılır.
 //ekranda Grid kullanılarak ekran 16 eşit parçaya bölünüyor 4 sütuna categorileri kalan 12 sütunada

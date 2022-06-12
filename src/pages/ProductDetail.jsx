@@ -46,4 +46,5 @@ export default function ProductDetail() {
     </div>
   );
 }
-//let {id} = useParams; normalde kullanımı let {id:id } olması gerekir ama her iki tarafta aynı olduğu için tek id ile parametre alınabilir.
+//let {id} = useParams; normalde kullanımı let {id:id } olması gerekir ama her iki tarafta aynı olduğu için tek id ile parametre alınabilir./product/12 şeklinde detail adresine 
+//yönlendirilirken ilgili adresteki parametresi yakalamak için kullanılr.Parametreleri obje olarak verir ve destructure işlemi yapılır.
