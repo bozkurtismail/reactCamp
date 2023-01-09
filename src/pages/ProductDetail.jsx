@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 
 export default function ProductDetail() {
-  let { name } = useParams();
+  let { name } = useParams(); // useParams =>parametreleri obje olarak verir.
 
   const [product, setProduct] = useState({});
 
